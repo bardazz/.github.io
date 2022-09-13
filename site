@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ua"></html>
+<head>
+    <meta charset="utf-8">
+    <title>Головна сторінка</title>
+    <meta name="description" content="Основи WEB-програмування">
+    <meta name="keyword" content="Програмування, HTML">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<h1>Основи WEB-програмування</h1>
+<p>Сайт <a href="http://математика.укр">Математика.Укр</a></p>
+</body>

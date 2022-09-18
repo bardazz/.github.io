@@ -1,93 +1,77 @@
-
-<!DOCTYPE html>
-<html lang='ua'>
+<!doctype html>
+<html lang="ua">
 <head>
-<title>Завдання 3</title>
-<meta charset="utf-8">
-<style>
-a{text-decoration:none} 
- body {background-color: white;}
-* {font-weight:bold;font-style: italic;font-family: Georgia, 'Times New Roman', Times, serif;}
-.header{background-color:aqua;margin: 1%;height: 80px;;max-height: 5%;overflow: hidden;text-align: center;}
-.menu{background-color: aqua;margin: 1%;height: 80px;;max-height: 5%;overflow: hidden;text-align: center;}
-.main-info{margin: 1%;width: 1px;height: 630px;overflow: hidden;text-align: center;}
-{div p{} .left-block {}.right-block{} .right-info{}}
-@media screen and (max-width: 1000px) {
-div p{
-font-size: 28px;
-margin-top: 24px;
-margin-bottom: 24px;
-} 
-.block1{
-background-color: aqua;
-position: absolute;
-width: 31%;
-height: 110px;
-}
-.block2{
-background-color: aqua;
-position: absolute;
-left: 71%;
-width: 27.2%;
-height: 110px;
-}  
-.block3{
-background-color: aqua;
-position: absolute;
-left: 35%;
-width: 34%;
-height: 600px;
-}
-.block4{
-background-color: aqua;
-position: absolute;
-left: 71%;
-width: 27.2%;
-height: 240px;}
-.block5{
-background-color: aqua;
-position: absolute;
-width: 31%;
-height: 240px;}
-}
-.s{
-margin-top: 120px;
-}
-.ss{
-margin-top: 240px;
-}
-.sss{
-margin-top:360px;
-}
-</style>
+    <style>
+        a{text-decoration:none}
+        * {font-weight:bold;font-style: italic;font-family: Georgia, 'Times New Roman', Times, serif;}
+        body,html {
+            margin: 0;
+            padding: 0;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+        }
+        .h100 {
+            height: 100%;
+        }
+        .h60 {
+            height: 60%;
+        }
+        .red {
+            background:aqua;
+        }
+        .h120px {
+            height: 120px;
+        }
+        .green {
+            background: aqua;
+        }
+        .mb-1 {
+            margin-bottom: 10px;
+        }
+        .ml-1 {
+            margin-left: 10px;
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex: 1 1 auto;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Лабараторна 3</title>
+    <meta name="description" content="Основи WEB-програмування">
+    <meta name="keyword" content="Програмування, HTML">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
 </head>
 <body>
-<div align="center" style="margin-bottom: 20px"><a href="./index.html" >Головна</a></div> 
-<div class='header'>
-<p>Шапка</p>
-</div>
-<div class='menu'>
-<p>Головне меню</p>
-</div>
-<div class='main-info'>
-<div>
-<div class="block1"></div>
-<div class="block2"></div>
-<div class="block3">
-</div>
-</div>
-<div class='s'>
-<div class="block1"></div>
-<div class="block2"></div>
-</div>
-<div class='ss'>          
-<div class="block1"></div>
-<div class="block2"></div>
-</div>
-<div class='sss'>
-<div class="block5"></div>
-<div class="block4"></div>
-</div>
+<div class="main">
+    <div align="center" 
+    class="green mb-1 h120px" style="text-align: center; line-height: 120px;font-size: 30px">Шапка</div>
+    <div class="red mb-1 h120px" style="text-align: center; line-height: 120px;font-size: 30px">Головне меню</div>
+    <div class="row">
+        <div class="column ">
+            <div class="red mb-1 h120px"></div>
+            <div class="red mb-1 h120px"></div>
+            <div class="red mb-1 h120px"></div>
+            <div class="red  h100 mb-1"></div>
+        </div>
+        <div class="column ml-1 green mb-1"></div>
+        <div class="column ml-1 ">
+            <div class="red mb-1 h120px"></div>
+            <div class="red mb-1 h120px"></div>
+            <div class="red mb-1 h120px"></div>
+            <div class="red  h100 mb-1"></div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

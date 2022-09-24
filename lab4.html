@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<style>
+ 
+ .animate-ul{position: relative;margin-top: 70px;left: 50%;display: flex;transform: translate(-50%,-50%);}
+.animate-ul li{list-style:none;letter-spacing:15px;font-size:5em;font-family:fantasy;color:#484848;animation:ani 1.2s linear infinite}
+.animate-ul li:nth-child(1){animation-delay:.2s}
+.animate-ul li:nth-child(2){animation-delay:.6s}
+.animate-ul li:nth-child(3){animation-delay:.8s}
+.animate-ul li:nth-child(4){animation-delay:1s}
+.animate-ul li:nth-child(5){animation-delay:1.4s}
+.animate-ul li:nth-child(6){animation-delay:1.8s}
+.animate-ul li:nth-child(7){animation-delay:1.12s}
+@keyframes ani {
+0%{color:#44848;text-shadow:none}
+90%{color:#44848;text-shadow:none}
+100%{color:#fff900;text-shadow:0 0 7px #fff900,0 0 70px #fff123}}
+
+
+
+
+
+
+  .main {
+            position: relative;
+            padding: 20px;
+        }
+        .s1 {
+            position: absolute;
+            background: aqua;
+            width: 100px;
+            height: 100px;
+        }
+        .s2 {
+            transform: rotate(45deg);
+            position: absolute;
+            background:aqua;
+            width: 100px;
+            height: 100px;
+        }
+ body{
+        margin: 0;
+        paddign:0;
+        background: #d3d3d3;
+      }
+      .social{
+        flex-direction: column;
+        width: 100%;
+        height: 40vh;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .social__icon{
+        text-decoration: none;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width: 70px;
+        height: 70px;
+        margin: 15px;
+        background-color: white;
+        border-radius: 50%;
+        box-shadow: 0px 0px 5px black;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow:hidden;
+      }
+      
+      .social__icon i {
+        font-size: 40px;
+        color: blue;
+        transition: all 0.3s ease;
+        z-index: 1;
+      }
+      
+      .social__icon:after{
+        content: "";
+        width: 70px;
+        height: 70px;
+        position:absolute;
+        transform: translate(0, 70px);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+      
+      .social__icon.krny:after{
+        background-color: red
+        ;
+      }
+      .social__icon.ax:after{
+        background-color: rgb(182, 235, 229);
+      }
+      
+      .social__icon:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 0px 20px black;
+      }
+      
+      .social__icon:hover i{
+         color: white;
+      }
+      
+      .social__icon:hover:after{
+        transform: translate(0);
+      }
+      .ark {color: blue; background-color: white;border-radius: 50%;width: 300px;
+        height: 300px;border:none;box-shadow: 0px 0px 5px black; cursor: grab;transition: all 0.3s ease;}
+        .ark:hover {transform: translateY(-10px);background-image: url("jungle.jpg"); transition: all 2s;color:white;}
+        
+
+      
+</style>
+    <style> a{text-decoration:none} </style>
+    <meta charset="utf-8">
+    <title>Лабараторна 4</title>
+    <meta name="description" content="Основи WEB-програмування">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+
+  <ul class="animate-ul">
+    <li>Ка</li>
+    <li>фе</li>
+    <li>дра</li>
+    <li>Інфо</li>
+    <li>рматики</li>
+  </ul>
+
+    <div class="social">
+      <div style="display:flex ; flex-direction:row;margin-top:400px;">
+        <a class="social__icon krny" href="https://www.google.com/sky/" target="blank" title="Space">
+        <i class="fab fa-grav"></i>
+        </a>
+        <a class="social__icon ax" onclick="alert('Hi')" href="#">
+          <i class="fab fa-fly"></i>
+        </a>
+        </a>
+      </div>
+        <a href="https://dymerlg.com.ua/no_cache/pres-sluzhba/novina/article/zberezhemo-lisi-zberezhem-zhittja.html"  target="blank"><button type="button" class="ark" >Forest</button></a>
+    </div>
+    <div class="main">
+      <div class="s1"></div>
+      <div class="s2"></div>
+</body>
+</html>

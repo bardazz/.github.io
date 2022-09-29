@@ -33,6 +33,8 @@
         .mb-1 {
             margin-bottom: 10px;
         }
+        .fm-1 {
+            margin-bottom: 10px;}
         .ml-1 {
             margin-left: 10px;
         }
@@ -48,8 +50,14 @@
         }
     @media screen and (max-width:768px){ 
         .h120px {
-            height: 500px
+            height: 300px
         }
+        .row {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;}
+            .fm-1 {margin-left: 0px;}
+            .ml-1 {margin-left: 0px;}
     }
     </style>
     <meta charset="UTF-8">
@@ -71,7 +79,7 @@
             <div class="red mb-1 h120px"></div>
             <div class="red  h100 mb-1"></div>
         </div>
-        <div class="column ml-1 green mb-1"></div>
+        <div class="column ml-1 green fm-1"></div>
         <div class="column ml-1 ">
             <div class="red mb-1 h120px"></div>
             <div class="red mb-1 h120px"></div>

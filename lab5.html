@@ -1,0 +1,90 @@
+<head>
+<style>
+    .left {margin: left;}
+    .but {background: whitesmoke;}
+    * {background: silver;}
+    .green {background: green;}
+    .border {border: 1px; box-shadow: 0px 0px 5px black;border-radius: 10%}
+    .orange {background: orange;}
+    .mar {
+        display: flex;
+        flex-direction: row;
+        margin-top: 5px;
+    }
+    * {text-decoration:none} 
+    * {font-style: italic;font-family: Georgia, 'Times New Roman', Times, serif;}
+    .list 
+    {display: flex;
+     flex-direction: row;
+     flex: 1 1 auto;}
+</style>
+<meta charset="utf-8">
+    <title>Лабараторна 5</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+</head>
+<h1 align="center" >Buy or Sold</h1>
+<a></a>
+<form >
+   <p>
+    <label for="username">Name</label>
+    <input id="username" type="text" placeholder="Your Name" required class="but">
+   </p> 
+   <p>
+    <label for="">Email</label>
+    <input id="" type="email" placeholder="Your email" required class="but">
+   </p> 
+   <H4>Наміри щодо товару:</H4>
+   <label class="list">
+    <input type="radio" id="sold" name="solder">
+    Купити
+   </label>
+   <label class="list">
+    <input type="radio" id="sold" name="solder">
+    Продати
+   </label>
+   <label>
+    <input type="radio" id="sold" name="solder">
+    Обмін
+   </label>
+   <h4>Тип придмету:</h4>
+   <label class="list">
+    <input type="checkbox" id="tip">
+    Побутова техніка
+   </label>
+   <label class="list">
+    <input type="checkbox" id="tip">
+    Дім та Сад
+   </label>
+    <label class="list">
+    <input type="checkbox" id="tip">
+    Дитячі товари
+   </label>
+   <label class="list">
+    <input type="checkbox" id="tip">
+    Офіс, школа, книги
+   </label>
+   <label class="list">
+    <input type="checkbox" id="tip">
+    Товари для геймерів
+   </label>
+   <label for="select-city">Виберіть місце проживання</label>
+   <select id="select-city" class="but">
+    <option value="Poltava">Полтава</option>
+    <option value="Kremen" selected>Кременчуг</option>
+    <option value="Karlivka">Карлівка</option>
+    <option value="loxviza">Лохвиця</option>
+    <option value="lanna">Ланна</option>
+    <option value="Federivka">Федирівка</option>
+   </select><br>
+   <label for="file" >Прикріпіть фото</label>
+    <input type="file" id="file">
+   </label>
+   <p align="left">
+   <textarea cols="30" rows=10 class="but"></textarea>
+</p>
+   <BR>
+   <input type="submit" class="but">
+   <input type="reset" class="but"><br>
+</form>
+<P>Сайти наших конкурентів:<a href="https://rozetka.com.ua/ua/" target="blank"><button name="button" id="enemy" class="list border green" >Rozetka</button></a>
+<a href="https://www.foxtrot.com.ua/uk" target="blank" class="mar" ><button name="button" id="enemy" class="orange border">Foxtrot</button></a></P>

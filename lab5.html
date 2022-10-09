@@ -5,16 +5,60 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Лабараторна 5</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <style>
+    
+        a{text-decoration:none}
+        .mr1 {
+            margin-left: 10px;
+        }
+        @media screen and (max-width:768px){
+            .mobl {
+                display: flex;
+                flex-direction: column;
+            }
+            .namir {
+                display: flex;
+                flex-direction: column; 
+            }
+        }
+        #username:focus {
+            outline: none;
+            background-color: white;
+            border: 2px solid brown !important;border-radius: 5%;
+        }
+        #email:focus {
+            outline: none;
+            background-color: white;
+            border: 2px solid brown !important;border-radius: 5%;}
+            #:focus {
+            outline: none;
+            background-color: white;
+            border: 2px solid brown !important;border-radius: 5%;}
+            #texta:focus {
+            outline: none;
+            background-color: white;
+            border: 2px solid brown !important;border-radius: 5%;}
+        .mara {
+            margin-bottom: 10px;
+        }
+     .but {background: whitesmoke;}
+       textarea {
+    width: 300px; 
+    height: 200px; 
+    resize: none;}
+       .green {background: green;}
+    .border {border: 1px; box-shadow: 0px 0px 5px black;border-radius: 5%}
+    .orange {background: orange;}
         body {
             margin: 0 0;
             width: 100vw;
             height: 100vh;
         }
         .main {
+            min-width: 425px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -29,16 +73,17 @@
     <div style="position: sticky; top: 0;">
         <a href="./index.html" >Головна</a></div>
     <h1 style="margin-bottom: 0">Buy or Sold</h1>
+    <form>
         <p>
-            <label for="username">Ім'я</label>
-            <input id="username" type="text" placeholder="Ваше Ім'я" required class="but">
+            <label for="username" style="width: 60px">Ім'я</label>
+            <input id="username" type="text" placeholder="Ваше Ім'я" required class="but border">
         </p>
         <p>
-            <label for="">Пошта</label>
-            <input id="" type="email" placeholder="Ваша пошта" required class="but">
+            <label for="" style="width: 60px">Пошта</label>
+            <input id="email" type="email" placeholder="Ваша пошта" required class="but border">
         </p>
         <H4>Наміри щодо товару:</H4>
-    <div>
+    <div class="namir">
         <label class="list">
             <input type="radio" id="sold1" name="solder">
             Купити
@@ -53,7 +98,7 @@
         </label>
     </div>
         <h4 style="margin-bottom: 5px">Тип придмету:</h4>
-    <div>
+    <div class="mobl">
         <label class="list">
             <input type="checkbox" id="tip1">
             Побутова техніка
@@ -75,9 +120,9 @@
             Товари для геймерів
         </label>
     </div>
-    <div>
+    <div style="display: flex; white-space: nowrap; align-items: center">
         <label for="select-city">Виберіть місце проживання</label>
-        <select id="select-city">
+        <select id="select-city" class="form-select mr1" >
             <option value="Poltava">Полтава</option>
             <option value="Kremen" selected>Кременчук</option>
             <option value="Karlivka">Карлівка</option>
@@ -92,15 +137,23 @@
     </div>
         </label>
         <p>
-            <textarea cols="30" rows=10 class="but"></textarea>
+            <textarea   style="overflow:hidden;" id="texta" cols="30" rows=10 class="but"></textarea>
         </p>
     <div>
-        <input type="submit" class="but" input="ua-UA">
-        <input type="reset" class="but">
+        <input type="submit" class="but border" input="ua-UA">
+        <input type="reset" class="but border mara">
     </div>
-    <p style="margin-bottom: 0">Сайти наших конкурентів:<a href="https://rozetka.com.ua/ua/" target="blank"><button name="button" id="enemy1" class="list border green" >Rozetka</button></a>
+</form>
+    <p style="margin-bottom: 0">Сайти наших конкурентів:<a href="https://rozetka.com.ua/ua/" target="blank"><button name="button" id="enemy1" class=" border green" >Rozetka</button></a>
         <a href="https://www.foxtrot.com.ua/uk" target="blank" class="mar" ><button name="button" id="enemy2" class="orange border">Foxtrot</button></a>
-    <p/>
+    </p>
 </div>
+<script>var textarea = document.querySelector('#texta');
+
+    textarea.addEventListener('keyup', function(){
+      if(this.scrollTop > 0){
+        this.style.height = this.scrollHeight + "px";
+      }
+    });</script>
 </body>
 </html>

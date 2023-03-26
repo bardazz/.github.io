@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <style>table,th,td{
+        border: 1px solid rgb(0, 0, 0);} .lesoon {width:100%; margin:0  0 5% ;} .red-center {color: red;width: 110px;text-align: center;}</style>
+    <meta charset="utf-8">
+    <style> .sii{width: 200px;} td{height: 5px};</style>
+    <title>Main</title>
+    <meta name="description" content="Основи WEB-програмування">
+    <meta name="keyword" content="Програмування, HTML">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<img style="display: block; margin: auto;" src="">
+<h1>HTML</h1>
+<p align="center">
+<textarea cols="100" rows="30" readonly>
+    <html>
+        <head>
+          <style>
+            .ake {
+              width: 10%;
+              height: 10%;
+            }
+            .voda {color: brown;}
+            .eda {color: red;}
+            .edda {color: orange} 
+            .golova {color: blue}
+          </style>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>
+    var sMyString = '<a id="a"><b id="b">hey!</b></a>';
+    var oParser = new DOMParser();
+    var oDOM = oParser.parseFromString(sMyString, "application/xml");
+    // print the name of the root element or error message
+    console.log(oDOM.documentElement.nodeName == "parsererror" ? "error while parsing" : oDOM.documentElement.nodeName);
+    function addBreakfestPart (menu = {}) {
+      const wraper = document.createElement("div");
+      const heder = document.createElement("h1"); 
+      heder.classList.add('golova');
+      heder.innerText=menu.type;
+      wraper.appendChild(heder);
+            const newPart = document.createElement("ul");
+            const drink = document.createElement("li");
+            drink.classList.add('voda');
+            drink.innerText=menu.drink
+            newPart.appendChild(drink);
+            const first = document.createElement("li");
+            first.classList.add('edda');
+            first.innerText=menu.first
+            newPart.appendChild(first);
+            const second = document.createElement("li");
+            second.classList.add('eda');
+            second.innerText=menu.second
+            newPart.appendChild(second);
+            const kar = document.createElement("img");
+            kar.classList.add('ake');
+            kar.src=menu.kar
+            heder.appendChild(kar);
+            const field = document.getElementById('menu');
+            wraper.appendChild(newPart);
+            field.appendChild(wraper);
+          }
+    var xhr = new XMLHttpRequest();
+    var xml;
+    xhr.onload = function() {
+      console.log(xhr.responseXML);
+    xml=xhr.responseXML;
+    var list =xml.getElementsByTagName("breakfest");
+    for (var i = 0; i < list.length; i++){
+    console.log(list[i]);
+    var obj={drink: list[i].querySelector("drink").innerHTML, first: list[i].querySelector("first").innerHTML, second: list[i].querySelector("second").innerHTML, type: list[i].querySelector("type").innerHTML,
+    kar: list[i].querySelector("kar").innerHTML}
+    addBreakfestPart(obj);
+    }
+    }
+    xhr.onerror = function() {
+      console.log("Error while getting XML.");
+    }
+    xhr.open("GET", "http://localhost:8080/xml");
+    xhr.responseType = "document";
+    xhr.send();
+        </script>
+    </head>
+        <body>
+        <div id="menu">
+        </div>
+        </body>
+        </html>
+</textarea>
+</p>
+<h1>Break.Xml</h1>
+<p align="center">
+    <textarea cols="100" rows="30" readonly>
+        <div>
+            <breakfest id='snidanok'>
+            <type>Сніданок</type>
+            <kar>https://www.pngall.com/wp-content/uploads/7/Morning-Breakfast-PNG-Free-Download.png</kar>
+            <drink>Молоко</drink>
+            <first>Яблуко</first>
+            <second>Крекер</second></breakfest>
+            <breakfest id='obid'>
+            <type>Обід</type>
+            <kar>https://free-png.ru/wp-content/uploads/2022/04/free-png.ru-436-340x274.png</kar>
+            <first>Гречана Каша</first>
+            <second>Сосиска</second>
+            <drink>Кава</drink>
+            </breakfest>
+            <breakfest id='vechera'>
+            <type>Вечеря</type>
+            <kar>https://www.pngall.com/wp-content/uploads/7/Breakfast-PNG-HD-Image.png</kar>
+            <first>Суп</first>
+            <second>Каша рисова</second>
+            <drink>Чай зелений</drink>
+            </breakfest>
+            </div>
+    </textarea>
+    </p>
+    <h1>Сервер JS</h1>
+    <p align="center">
+        <textarea cols="100" rows="30" readonly>
+            const http = require('http');
+            const fs = require('fs');
+            const server = http.createServer();
+            
+            server.on('request', async (request, response) => {
+              const baseURL =  request.protocol + '://' + request.headers.host + '/';
+              const reqUrl = new URL(request.url,baseURL);
+              console.log(reqUrl);
+              switch (reqUrl.pathname) {
+                case '/xml':
+                  const xml = fs.readFileSync('./break.xml');
+                  response.writeHead(200, {"Content-Type": "application/xml"});
+                  response.end(xml);
+                  break
+                case '/html':
+                  const html = fs.readFileSync('./html.html');
+                  response.writeHead(200, {"Content-Type": "text/html"});
+                  response.end(html);
+                  break
+                default:
+                  response.writeHead(404, {"Content-Type": "text/plain"});
+                  response.end("Not Found, wrong path\n");
+                  break;
+              }
+            });
+            
+            server.listen(8080, () => {
+              console.log('Started listening on 8080');
+            });
+        </textarea>
+        </p>

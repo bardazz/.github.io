@@ -1,6 +1,22 @@
 <div>
-<a id="snidanok">Сніданок</a>
-<v id="moloko">Молоко</v>
-<x id="apple">Яблуко</x>
-<w id="sneak">Крекер</w>
+<breakfest id='snidanok'>
+<type>Сніданок</type>
+<kar>https://www.pngall.com/wp-content/uploads/7/Morning-Breakfast-PNG-Free-Download.png</kar>
+<drink>Кофе</drink>
+<first>Яблуко</first>
+<second>Крекер</second></breakfest>
+<breakfest id='obid'>
+<type>Обід</type>
+<kar>https://free-png.ru/wp-content/uploads/2022/04/free-png.ru-436-340x274.png</kar>
+<first>Гречана Каша</first>
+<second>Сосиска</second>
+<drink>Кава</drink>
+</breakfest>
+<breakfest id='vechera'>
+<type>Вечеря</type>
+<kar>https://www.pngall.com/wp-content/uploads/7/Breakfast-PNG-HD-Image.png</kar>
+<first>Суп</first>
+<second>Каша рисова</second>
+<drink>Чай зелений</drink>
+</breakfest>
 </div>

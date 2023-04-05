@@ -1,0 +1,67 @@
+<html>
+    <head>
+      <style>
+        .ake {
+          width: 10%;
+          height: 10%;
+        }
+        .voda {color: brown;}
+        .eda {color: red;}
+        .edda {color: orange} 
+        .golova {color: blue}
+      </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script>
+function addBreakfestPart (menu = {}) {
+  const wraper = document.createElement("div");
+  const heder = document.createElement("h1"); 
+  heder.classList.add('golova');
+  heder.innerText=menu.type;
+  wraper.appendChild(heder);
+        const newPart = document.createElement("ul");
+        const drink = document.createElement("li");
+        drink.classList.add('voda');
+        drink.innerText=menu.drink
+        newPart.appendChild(drink);
+        const first = document.createElement("li");
+        first.classList.add('edda');
+        first.innerText=menu.first
+        newPart.appendChild(first);
+        const second = document.createElement("li");
+        second.classList.add('eda');
+        second.innerText=menu.second
+        newPart.appendChild(second);
+        const kar = document.createElement("img");
+        kar.classList.add('ake');
+        kar.src=menu.kar
+        heder.appendChild(kar);
+        const field = document.getElementById('menu');
+        wraper.appendChild(newPart);
+        field.appendChild(wraper);
+      }
+var xhr = new XMLHttpRequest();
+var xml;
+xhr.onload = function() {
+  console.log(xhr.responseXML);
+xml=xhr.responseXML;
+var list =xml.getElementsByTagName("breakfest");
+for (var i = 0; i < list.length; i++){
+console.log(list[i]);
+var obj={drink: list[i].querySelector("drink").innerHTML, first: list[i].querySelector("first").innerHTML, second: list[i].querySelector("second").innerHTML, type: list[i].querySelector("type").innerHTML,
+kar: list[i].querySelector("kar").innerHTML}
+addBreakfestPart(obj);
+}
+}
+xhr.onerror = function() {
+  console.log("Error while getting XML.");
+}
+xhr.open("GET", "http://localhost:8080/xml");
+xhr.responseType = "document";
+xhr.send();
+    </script>
+</head>
+    <body>
+    <div id="menu">
+    </div>
+    </body>
+    </html>

@@ -2,8 +2,13 @@
 <div align="center" style="margin-bottom: px;position: sticky; top: 0;"><a href="./index.html" >Головна</a></div>
 <svg xmlns="http://www.w3.org/2000/svg" >
     <defs>
-        <pattern id="img1" patternUnits="userSpaceOnUse" width="100%" height="200">
+        <pattern  id="img1" patternUnits="userSpaceOnUse" width="100%" height="200">
             <image  xlink:href="https://www.pngall.com/wp-content/uploads/2016/06/Earth-PNG.png"  width="100%" height="300" />
+        </pattern>
+    </defs>
+    <defs>
+        <pattern id="img3" patternUnits="userSpaceOnUse" width="600" height="140">
+            <image  xlink:href="https://images.prom.ua/352774841_w640_h640_kirka-motyga-sapka-.jpg"  width="600" height="120" />
         </pattern>
     </defs>
     <defs>
@@ -26,6 +31,30 @@
                 dur="10s"
                 repeatCount="indefinite"
                 path="M45,80 C40,-35 155,125 45 80" />
-            </circle>
+            </circle></svg></svg>
+            <svg>
+                <animateTransform attributeName="transform" 
+        type="rotate" from="50 0 0" to="10 0 0" dur="2s" repeatCount="indefinite"/>
+                <line  x1="20" y1="80" x2="200" y2="80" style="stroke: red; stroke-width: 3px;" />
+                <line x1="20" y1="80" x2="20" y2="110" style="stroke: red; stroke-width: 3px;" />
+            </svg>
+        <svg >
+            <circle cx="30" cy="20" r="15" fill="LightPink" transform="scale(4)" />
+            <circle cx="30" cy="80" r="15" fill="LightCyan" transform="scale(4, 1)" stroke="red"stroke-width="0.7"/>
+            <circle cx="120" cy="80" r="13" fill="DeepSkyBlue" />
+            <circle cx="120" cy="80" r="4" fill="black" />
+          </svg>
+          <svg >
+            <polygon points="50,5 20,100 110,45 5,41 85,100"
+            style="fill:white;stroke:aqua;stroke-width:3;"/>
+          </svg>
+          <svg width="400" height="140">
+            <animateTransform attributeName="transform" 
+        type="rotate" from="10 0 0" to="0 40 40" dur="1s" repeatCount="indefinite"/>
+            <rect x="80" y="20"  width="400" height="200"
+            style="fill:url(#img3)" />
+          </svg>
+
+            
         
         

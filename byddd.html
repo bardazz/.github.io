@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ua">
+<head>
+    <style>
+        .styl {position:fixed top:0;}
+        a{text-decoration:none}
+        * {font-weight:bold;font-style: italic;font-family: Georgia, 'Times New Roman', Times, serif;}
+        body,html {
+            margin: 0;
+            padding: 0;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+        }
+        .h100 {
+            height: 100%;
+        }
+        .h60 {
+            height: 60%;
+        }
+        .red {
+            background:aqua;
+        }
+        .h120px {
+            height: 120px;
+        }
+        .green {
+            background: aqua;
+        }
+        .mb-1 {
+            margin-bottom: 10px;
+        }
+        .fm-1 {
+            margin-bottom: 10px;}
+        .ml-1 {
+            margin-left: 10px;
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+   
+        }
+    @media screen and (max-width:768px){ 
+        .h120px {
+            height: 300px
+        }
+        .row {
+            display: flex;
+            flex-direction: column;}
+            .fm-1 {margin-left: 0px;}
+            .ml-1 {margin-left: 0px;}
+    }
+    </style>
+    <meta charset="UTF-8">
+    <title>Лабараторна 3</title>
+    <meta name="description" content="Основи WEB-програмування">
+    <meta name="keyword" content="Програмування, HTML">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+</head>
+<body>
+<div class="main">
+    <div align="center" 
+    class="green mb-1 h120px" style="text-align: center; line-height: 120px;font-size: 30px">Урок №1 Будова Персонально комп’ютера "ПК"</div>
+    <div class="row">
+        <div class="column ">
+            <div class="red mb-1 h120px"></div>
+        </div>
+        <div class="column ml-1 green fm-1">Зазвичай до основних складових персонального комп’ютера відносять:системний блок, монітор, клавіатуру, мишу.
+            Але існують і інші пристрої, допоміжні.Ці всі пристрої об’єднуються в групи: пристрої введення та виведення, а ще існують пристрої обробки та зберігання даних.</div>
+        <div class="column ml-1 ">
+            <div class="red mb-1 h120px"></div>
+            
+        </div>
+        
+    </div>  
+</div>
+</body>
+</html>

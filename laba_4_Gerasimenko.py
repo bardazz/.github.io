@@ -29,16 +29,15 @@ else:
 ror = round(ror, 0)
 print("The tax is:", ror, "thalers")
 #5
-year = int(input('enter the year: '))
+year = int(input('Введіть рік: '))
+
 if year < 1582:
-    print('Не цей період.')
-elif (year % 4) != 0:
-    if (year % 100) != 0:
-        print('високосний рік')
-    elif (year % 400) != 0:
-        print('загальний рік')
+    print('Цей період не враховується.')
+elif (year % 4 != 0) or ((year % 100 == 0) and (year % 400 != 0)):
+    print('Це звичайний рік')
 else:
-    print('високосний рік')
+    print('Це високосний рік')
+
 #6
 secret_number = 5
 print(
@@ -98,15 +97,16 @@ while blocks > 0:
         break
 print(counter)
 #12
-def hypothesis(num, counter = 0):
-    if num % 2 == 0:
-        num /= 2
-    else:
-        num = 3 * num + 1
-    counter += 1
-    print(int(num))
-    if num != 1:
-        hypothesis(num, counter)
-    else:
-        print(f'steps = {counter}')
-hypothesis(int(input('enter tge number: ')))
+def hypothesis(num):
+    counter = 0
+    while num != 1:
+        if num % 2 == 0:
+            num /= 2
+        else:
+            num = 3 * num + 1
+        counter += 1
+        print(int(num))
+    print(f'steps = {counter}')
+
+number = int(input('Введіть число: '))
+hypothesis(number)

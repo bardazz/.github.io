@@ -12,41 +12,37 @@ else:
 #2
 def enter_date():
     try:
-        date = int(input("Введіть дату народження у форматі РікМісяцДень: "))
-        date = str(date)
-        if len(date) != 8:
+        date = input("Введіть дату народження в форматі РікМісяцДень: ")
+        if len(date) != 8 or not date.isdigit():
             raise ValueError
-    except:
+    except ValueError:
         print('Введіть коректну дату!')
         enter_date()
     while True:
-        sum = 0
-        for simbol in date:
-            sum += int(simbol)
-
-        date = str(sum)
+        total = sum(int(simbol) for simbol in date)
+        date = str(total)
 
         if len(date) == 1:
             break
-    print(sum)
+    print(total)
 enter_date()
 #3
 def input_number():
     try:
         number = int(input('Enter a number: '))
-        min = int(input('Enter a min border: '))
-        max = int(input('Enter a max border: '))
-        if min >= max:
+        min_val = int(input('Enter a min border: '))
+        max_val = int(input('Enter a max border: '))
+        if min_val >= max_val:
             raise ValueError
-        check_min_max(number, min, max)
-    except:
-        print('Error: wrong input')
+        check_min_max(number, min_val, max_val)
+    except ValueError:
+        print('Помилка: неправильне введення')
         input_number()
-def check_min_max(number, min, max):
-    if number > min and number < max:
+
+def check_min_max(number, min_val, max_val):
+    if min_val < number < max_val:
         print(number)
-        return
     else:
-        print(f'Error: the value is not within permitted range ({min} - {max})')
+        print(f'Некоректне значення({min_val} - {max_val})')
         input_number()
 input_number()

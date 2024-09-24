@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meow</title>
+    <style>
+        #b1{
+            transition: all 500ms;
+            font-size: 5vw; 
+            font-family: Arial, Helvetica, sans-serif; 
+            background-color: blueviolet; 
+            border-radius:1vw;
+            padding: 1vw 3vw;
+            margin: 1vw;
+            animation-name: knopka;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            text-shadow: 1vw 1vw 1vw rgb(0, 0, 0);
+            letter-spacing: 4vw;
+        }
+@keyframes knopka {
+  from {
+    font-size: 100%;
+  }
+
+  to {
+    font-size: 500%;
+  }
+}
+
+        #b1:hover{
+            font-size: 10vw;
+            border-radius: 0;
+        }
+        #b2{
+            transition: all 500ms;
+            font-size: 5vw; 
+            font-family: Arial, Helvetica, sans-serif; 
+            background-color: rgb(163, 255, 113); 
+            border-radius:1vw;
+            margin: 1vw;
+            padding: 1vw 3vw;
+            animation-name: knopka;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            text-shadow: 1vw 1vw 1vw rgb(0, 0, 0);
+            letter-spacing: 4vw;
+        }
+        #b2:hover{
+            font-size: 10vw;
+            border-radius: 0;
+        }
+        #b3{
+            transition: all 500ms;
+            font-size: 5vw; 
+            font-family: Arial, Helvetica, sans-serif; 
+            background-color: rgb(197, 135, 255); 
+            border-radius:1vw;
+            margin: 1vw;
+            padding: 1vw 3vw;
+            animation-name: knopka;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            text-shadow: 1vw 1vw 1vw rgb(0, 0, 0);
+            letter-spacing: 4vw;
+        }
+        #b3:hover{
+            font-size: 10vw;
+            border-radius: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 6vw; font-family: Arial, Helvetica, sans-serif; text-align: center;">Кнопки з індивідуальними <br> ховер-еффектами</h1>
+    <div id="button_container" style=" text-align: center;">
+        <button id="b1">Meow</button>
+        <button id="b2">Meow</button> <br>
+        <button id="b3"">Meow</button>
+    </div>
+</body>
+</html>

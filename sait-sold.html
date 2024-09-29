@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-image: url(ffff.jfif);
+        }
+
+        .container {
+            display: grid;
+            place-items: center;
+        }
+
+        .top1 {
+            margin-top: 40px;
+        }
+
+        .sp {
+            font-size: 20px;
+            list-style-type: none; /* Убираем стандартные маркеры списка */
+            padding: 0;
+            margin: 0;
+        }
+
+        .sp li {
+            display: flex;
+            justify-content: space-between; /* Размещаем текст и изображение по разным сторонам */
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc; /* Линия под каждым элементом списка */
+            margin-bottom: 20px;
+        }
+
+        .image {
+            max-width: 200px;
+            margin-left: 20px; /* Отступ слева для изображения */
+        }
+
+        .text {
+            flex-grow: 1; /* Текст будет занимать оставшееся пространство */
+            margin-right: 20px; /* Отступ справа от изображения */
+        }
+
+        .description {
+            font-size: 16px;
+            color: rgb(10, 0, 0);
+            margin-top: 5px; /* Небольшой отступ сверху */
+            font-weight: bold;
+        }
+
+        .price {
+            font-size: 18px;
+            color: white;
+            background-color: green;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none; /* Убираем подчеркивание у ссылки */
+            display: inline-block;
+            margin-top: 5px; /* Отступ для цены */
+            font-weight: bold;
+        }
+        .price:hover {
+            background-color: darkgreen; /* Темный цвет при наведении */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="top1" style="font-size: 40px; color: hotpink;"> Створення списку продажу інструментів</h1>
+        <p style="font-size: 30px; color: rgb(228, 15, 15); margin-top: -10px;"> <b>Пропозиції дня!!!</b></p>
+    </div>
+
+    <ol class="sp">
+        <li id="1">
+            <div class="text">
+                <strong>Шуруповерт</strong>
+                <p class="description">Потужний шуроповерт для домашнього використання.</p>
+                <a href="https://example.com/shyrik" class="price">Ціна: 1200 грн</a> <!-- Ссылка для перехода -->
+            </div>
+            <img src="far-removebg-preview.png" class="image" alt="Shyriik">
+        </li>
+        <li id="2">
+            <div class="text">
+                <strong>Перфератор</strong>
+                <p class="description">Ідеально підходить для свердління бетонних стін.</p>
+                <a href="https://example.com/perferator" class="price">Ціна: 2400 грн</a> <!-- Ссылка для перехода -->
+            </div>
+            <img src="perferator-removebg-preview.png" class="image" alt="Perferator">
+        </li>
+        <li id="3">
+            <div class="text">
+                <strong>Дрель</strong>
+                <p class="description">Професійний дриль з багатьма режимами роботи.</p>
+                <a href="https://example.com/drel" class="price">Ціна: 1800 грн</a> <!-- Ссылка для перехода -->
+            </div>
+            <img src="drel-removebg-preview.png" class="image" alt="Drel">
+        </li>
+        <li id="4">
+            <div class="text">
+                <strong>Молоток</strong>
+                <p class="description">Надійний молоток з гумовою ручкою для комфортної роботи.</p>
+                <a href="https://example.com/molotok" class="price">Ціна: 300 грн</a> <!-- Ссылка для перехода -->
+            </div>
+            <img src="molotok-removebg-preview.png" class="image" alt="Molotok">
+        </li>
+    </ol>
+</body>
+</html>
